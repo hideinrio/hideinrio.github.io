@@ -2,82 +2,166 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hide in Rio</title>
-    <style>
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f0f2f5; color: #333; scroll-behavior: smooth; }
-        header, footer { background-color: #1E88E5; color: white; padding: 1em; text-align: center; }
-        nav a { margin: 0 15px; color: white; text-decoration: none; font-weight: bold; }
-        .lang { float: right; margin-top: -2em; margin-right: 1em; }
-        section { max-width: 1000px; margin: auto; padding: 3em 2em; animation: fadeIn 1s ease-in-out; }
-        .pacote { background: white; padding: 2em; border-radius: 15px; margin-bottom: 3em; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .pacote h3 { margin-top: 0; color: #1E88E5; }
-        .pacote p { text-align: justify; }
-        .button-whatsapp {
-            display: inline-block;
-            background-color: #25d366;
-            color: white;
-            padding: 10px 20px;
-            margin-top: 15px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hide in Rio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      background-color: #fafafa;
+      color: #333;
+    }
+    header {
+      background-color: #0D47A1;
+      color: white;
+      padding: 1.5em 1em;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      margin-top: 1em;
+    }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+    }
+    .lang {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 0.9em;
+    }
+    .lang a {
+      color: white;
+      margin: 0 5px;
+      text-decoration: underline;
+    }
+    section {
+      padding: 3em 1.5em;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .pacote {
+      background: white;
+      padding: 2em;
+      margin-bottom: 3em;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .pacote h3 {
+      color: #0D47A1;
+      margin-top: 0;
+    }
+    .pacote p {
+      text-align: justify;
+      line-height: 1.6;
+    }
+    .button-whatsapp {
+      display: inline-block;
+      background-color: #25d366;
+      color: white;
+      padding: 12px 25px;
+      margin-top: 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+    }
+    footer {
+      background-color: #0D47A1;
+      color: white;
+      text-align: center;
+      padding: 2em 1em;
+      margin-top: 4em;
+    }
+    @media (max-width: 600px) {
+      nav a { display: block; margin: 10px 0; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Hide in Rio</h1>
-        <div class="lang">
-            <a href="#pt">PT</a> | <a href="#en">EN</a>
-        </div>
-        <nav>
-            <a href="#pacotes">Pacotes</a>
-            <a href="#sobre">Sobre Nós</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </header>
+  <header>
+    <h1>Hide in Rio</h1>
+    <div class="lang">
+      <a href="#pt">PT</a> | <a href="#en">EN</a>
+    </div>
+    <nav>
+      <a href="#pacotes">Pacotes</a>
+      <a href="#sobre">Sobre Nós</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-    <section id="pacotes">
-        <h2>Pacotes</h2>
-        
-        <div class="pacote">
-            <h3>🌄 Natureza Selvagem e Sabor Local</h3>
-            <p><strong>Duração:</strong> 6 horas<br><strong>Experiência:</strong> Trilha + Praia + Gastronomia local</p>
-            <p>Comece o dia com uma das experiências mais autênticas e inesquecíveis de Niterói: a trilha até o topo do Costão de Itacoatiara. Com um visual de tirar o fôlego, lá do alto é possível ver todo o litoral oceânico, com vistas panorâmicas do mar e das montanhas. A descida te leva direto para um merecido mergulho nas águas cristalinas da Praia de Itacoatiara, considerada a 12ª praia mais bonita do Brasil.</p>
-            <p>Para finalizar com o verdadeiro sabor local, nada melhor do que o famoso Sanduíche do Marcelo – tradicional, farto e saboroso, feito na hora, com ingredientes frescos. É um clássico amado por moradores e visitantes.</p>
-            <a class="button-whatsapp" target="_blank" href="https://wa.me/5521968471111?text=Olá,%20quero%20saber%20mais%20informações%20sobre%20o%20pacote%20Natureza%20Selvagem%20e%20Sabor%20Local.">Falar sobre este pacote</a>
-        </div>
+  <section id="pacotes">
+    <h2 style="color:#0D47A1;">Pacotes</h2>
 
-        <div class="pacote">
-            <h3>🌅 Do Azul ao Dourado: Camboinhas e Sossego</h3>
-            <p><strong>Duração:</strong> 5 horas<br><strong>Experiência:</strong> Praia + Contemplação + Natureza preservada</p>
-            <p>Um passeio ideal para quem busca paz, beleza e conexão com a natureza. Começamos pela encantadora Praia de Camboinhas, de águas calmas e cenário paradisíaco. Em seguida, seguimos para a joia escondida da cidade: a Praia do Sossego — com acesso mais reservado, ela faz parte do Parque Natural Municipal de Niterói (PARNIT), preservando sua vegetação nativa e sua essência natural.</p>
-            <p>A grande cereja do bolo? Um dos pôr do sol mais deslumbrantes da cidade, visto do mirante natural entre as duas praias. A luz dourada refletindo no mar torna essa experiência simplesmente inesquecível.</p>
-            <a class="button-whatsapp" target="_blank" href="https://wa.me/5521968471111?text=Olá,%20quero%20saber%20mais%20informações%20sobre%20o%20pacote%20Do%20Azul%20ao%20Dourado:%20Camboinhas%20e%20Sossego.">Falar sobre este pacote</a>
-        </div>
+    <div class="pacote">
+      <h3>🌄 Natureza Selvagem e Sabor Local</h3>
+      <p><strong>Duração:</strong> 6 horas<br><strong>Experiência:</strong> Trilha + Praia + Gastronomia local</p>
+      <p>Comece o dia com uma das experiências mais autênticas e inesquecíveis de Niterói: a trilha até o topo do Costão de Itacoatiara. Com um visual de tirar o fôlego, lá do alto é possível ver todo o litoral oceânico, com vistas panorâmicas do mar e das montanhas. A descida te leva direto para um merecido mergulho nas águas cristalinas da Praia de Itacoatiara, considerada a 12ª praia mais bonita do Brasil.</p>
+      <p>Para finalizar com o verdadeiro sabor local, nada melhor do que o famoso Sanduíche do Marcelo – tradicional, farto e saboroso, feito na hora, com ingredientes frescos. É um clássico amado por moradores e visitantes.</p>
+      <a class="button-whatsapp" href="https://wa.me/5521968471111?text=Olá,%20quero%20saber%20mais%20informações%20sobre%20o%20pacote%20Natureza%20Selvagem%20e%20Sabor%20Local.">Falar sobre este pacote</a>
+    </div>
 
-        <div class="pacote">
-            <h3>🌞 Nascer, Viver e Pôr-se em Piratininga</h3>
-            <p><strong>Duração:</strong> Dia completo<br><strong>Experiência:</strong> Nascer e pôr do sol + Praias + Mirante</p>
-            <p>Acorde cedo para um espetáculo exclusivo: o nascer do sol na Rua Pedro Tavares Dias Pessoa, em Piratininga — uma vista privilegiada que revela a Lagoa, o mar, o Cristo Redentor ao fundo e uma explosão de cores no céu.</p>
-            <p>Depois, curta um banho na Prainha de Piratininga, ideal para relaxar, e em seguida aproveite o Praião, amplo e perfeito para caminhar ou simplesmente se deitar ao sol. Para encerrar o dia com chave de ouro, subimos ao Mirante de Piratininga para mais um momento mágico: o pôr do sol que transforma todo o horizonte num quadro vivo.</p>
-            <a class="button-whatsapp" target="_blank" href="https://wa.me/5521968471111?text=Olá,%20quero%20saber%20mais%20informações%20sobre%20o%20pacote%20Nascer,%20Viver%20e%20Pôr-se%20em%20Piratininga.">Falar sobre este pacote</a>
-        </div>
+    <div class="pacote">
+      <h3>🌅 Do Azul ao Dourado: Camboinhas e Sossego</h3>
+      <p><strong>Duração:</strong> 5 horas<br><strong>Experiência:</strong> Praia + Contemplação + Natureza preservada</p>
+      <p>Um passeio ideal para quem busca paz, beleza e conexão com a natureza. Começamos pela encantadora Praia de Camboinhas, de águas calmas e cenário paradisíaco. Em seguida, seguimos para a joia escondida da cidade: a Praia do Sossego — com acesso mais reservado, ela faz parte do Parque Natural Municipal de Niterói (PARNIT), preservando sua vegetação nativa e sua essência natural.</p>
+      <p>A grande cereja do bolo? Um dos pôr do sol mais deslumbrantes da cidade, visto do mirante natural entre as duas praias. A luz dourada refletindo no mar torna essa experiência simplesmente inesquecível.</p>
+      <a class="button-whatsapp" href="https://wa.me/5521968471111?text=Olá,%20quero%20saber%20mais%20informações%20sobre%20o%20pacote%20Do%20Azul%20ao%20Dourado:%20Camboinhas%20e%20Sossego.">Falar sobre este pacote</a>
+    </div>
 
-        <div class="pacote">
-            <h3>🏝️ História, Arte e Boemia à Beira-Mar</h3>
-            <p><strong>Duração:</strong> Dia completo<br><strong>Experiência:</strong> Patrimônio histórico + Museu + Praia + Vida noturna</p>
-            <p>Nosso roteiro começa na Ilha da Boa Viagem, um lugar onde natureza e história se entrelaçam. Tombada pelo IPHAN desde 1938, a ilha já foi ponto estratégico militar, sede de movimentos sociais e abrigo de tradições culturais. Com vista para a Baía de Guanabara, caminhar por ali é como atravessar séculos de histórias e respirar a energia do mar.</p>
-            <p>Em seguida, seguimos para o icônico MAC – Museu de Arte Contemporânea de Niterói, obra-prima de Oscar Niemeyer. Lá dentro, além de exposições modernas, você encontrará uma das vistas mais marcantes da cidade.</p>
-            <p>No fim da tarde, um momento de contemplação na Praia de Icaraí, onde o sol se põe atrás do Rio de Janeiro e do Pão de Açúcar. E para encerrar a noite com alegria e movimento, a pedida é a Rua Nóbrega, reduto boêmio de Niterói, cheia de música ao vivo, bares e aquela vibe leve e vibrante de quem sabe aproveitar a vida.</p>
-            <a class="button-whatsapp" target="_blank" href="https://wa.me/5521968471111?text=Olá,%20quero%20saber%20mais%20informações%20sobre%20o%20pacote%20História,%20Arte%20e%20Boemia%20à%20Beira-Mar.">Falar sobre este pacote</a>
-        </div>
-    </section>
+    <div class="pacote">
+      <h3>🌞 Nascer, Viver e Pôr-se em Piratininga</h3>
+      <p><strong>Duração:</strong> Dia completo<br><strong>Experiência:</strong> Nascer e pôr do sol + Praias + Mirante</p>
+      <p>Acorde cedo para um espetáculo exclusivo: o nascer do sol na Rua Pedro Tavares Dias Pessoa, em Piratininga — uma vista privilegiada que revela a Lagoa, o mar, o Cristo Redentor ao fundo e uma explosão de cores no céu.</p>
+      <p>Depois, curta um banho na Prainha de Piratininga, ideal para relaxar, e em seguida aproveite o Praião, amplo e perfeito para caminhar ou simplesmente se deitar ao sol. Para encerrar o dia com chave de ouro, subimos ao Mirante de Piratininga para mais um momento mágico: o pôr do sol que transforma todo o horizonte num quadro vivo.</p>
+      <a class="button-whatsapp" href="https://wa.me/5521968471111?text=Olá,%20quero%20saber%20mais%20informações%20sobre%20o%20pacote%20Nascer,%20Viver%20e%20Pôr-se%20em%20Piratininga.">Falar sobre este pacote</a>
+    </div>
+
+    <div class="pacote">
+      <h3>🏝️ História, Arte e Boemia à Beira-Mar</h3>
+      <p><strong>Duração:</strong> Dia completo<br><strong>Experiência:</strong> Patrimônio histórico + Museu + Praia + Vida noturna</p>
+      <p>Nosso roteiro começa na Ilha da Boa Viagem, um lugar onde natureza e história se entrelaçam. Tombada pelo IPHAN desde 1938, a ilha já foi ponto estratégico militar, sede de movimentos sociais e abrigo de tradições culturais. Com vista para a Baía de Guanabara, caminhar por ali é como atravessar séculos de histórias e respirar a energia do mar.</p>
+      <p>Em seguida, seguimos para o icônico MAC – Museu de Arte Contemporânea de Niterói, obra-prima de Oscar Niemeyer. Lá dentro, além de exposições modernas, você encontrará uma das vistas mais marcantes da cidade.</p>
+      <p>No fim da tarde, um momento de contemplação na Praia de Icaraí, onde o sol se põe atrás do Rio de Janeiro e do Pão de Açúcar. E para encerrar a noite com alegria e movimento, a pedida é a Rua Nóbrega, reduto boêmio de Niterói, cheia de música ao vivo, bares e aquela vibe leve e vibrante de quem sabe aproveitar a vida.</p>
+      <a class="button-whatsapp" href="https://wa.me/5521968471111?text=Olá,%20quero%20saber%20mais%20informações%20sobre%20o%20pacote%20História,%20Arte%20e%20Boemia%20à%20Beira-Mar.">Falar sobre este pacote</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Hide in Rio — contactishinnrio@gmail.com</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
