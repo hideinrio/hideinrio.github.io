@@ -6,14 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hide in Rio</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f9f9f9; color: #333; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f0f2f5; color: #333; scroll-behavior: smooth; }
         header, footer { background-color: #1E88E5; color: white; padding: 1em; text-align: center; }
-        nav a { margin: 0 15px; color: white; text-decoration: none; }
-        section { padding: 2em; max-width: 900px; margin: auto; }
-        h2 { color: #1E88E5; }
-        .pacote { background: white; padding: 1em; margin-bottom: 2em; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .pacote h3 { margin-top: 0; }
-        .lang { float: right; margin: 1em; }
+        nav a { margin: 0 15px; color: white; text-decoration: none; font-weight: bold; }
+        .lang { float: right; margin-top: -2em; margin-right: 1em; }
+        section { max-width: 1000px; margin: auto; padding: 3em 2em; animation: fadeIn 1s ease-in-out; }
+        .pacote { background: white; padding: 2em; border-radius: 15px; margin-bottom: 3em; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .pacote h3 { margin-top: 0; color: #1E88E5; }
+        .pacote p { text-align: justify; }
+        .button-whatsapp {
+            display: inline-block;
+            background-color: #25d366;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
@@ -31,48 +45,39 @@
 
     <section id="pacotes">
         <h2>Pacotes</h2>
+        
         <div class="pacote">
             <h3>🌄 Natureza Selvagem e Sabor Local</h3>
-            <p><strong>Duração:</strong> 6 horas</p>
-            <p><strong>Experiência:</strong> Trilha + Praia + Gastronomia local</p>
-            <p>Comece o dia com uma das experiências mais autênticas de Niterói: a trilha até o topo do Costão de Itacoatiara. [...] Sanduíche do Marcelo.</p>
+            <p><strong>Duração:</strong> 6 horas<br><strong>Experiência:</strong> Trilha + Praia + Gastronomia local</p>
+            <p>Comece o dia com uma das experiências mais autênticas e inesquecíveis de Niterói: a trilha até o topo do Costão de Itacoatiara. Com um visual de tirar o fôlego, lá do alto é possível ver todo o litoral oceânico, com vistas panorâmicas do mar e das montanhas. A descida te leva direto para um merecido mergulho nas águas cristalinas da Praia de Itacoatiara, considerada a 12ª praia mais bonita do Brasil.</p>
+            <p>Para finalizar com o verdadeiro sabor local, nada melhor do que o famoso Sanduíche do Marcelo – tradicional, farto e saboroso, feito na hora, com ingredientes frescos. É um clássico amado por moradores e visitantes.</p>
+            <a class="button-whatsapp" target="_blank" href="https://wa.me/5521968471111?text=Olá,%20quero%20saber%20mais%20informações%20sobre%20o%20pacote%20Natureza%20Selvagem%20e%20Sabor%20Local.">Falar sobre este pacote</a>
         </div>
+
         <div class="pacote">
             <h3>🌅 Do Azul ao Dourado: Camboinhas e Sossego</h3>
-            <p><strong>Duração:</strong> 5 horas</p>
-            <p><strong>Experiência:</strong> Praia + Contemplação + Natureza preservada</p>
-            <p>Um passeio ideal para quem busca paz. [...] um dos pôr do sol mais deslumbrantes da cidade.</p>
+            <p><strong>Duração:</strong> 5 horas<br><strong>Experiência:</strong> Praia + Contemplação + Natureza preservada</p>
+            <p>Um passeio ideal para quem busca paz, beleza e conexão com a natureza. Começamos pela encantadora Praia de Camboinhas, de águas calmas e cenário paradisíaco. Em seguida, seguimos para a joia escondida da cidade: a Praia do Sossego — com acesso mais reservado, ela faz parte do Parque Natural Municipal de Niterói (PARNIT), preservando sua vegetação nativa e sua essência natural.</p>
+            <p>A grande cereja do bolo? Um dos pôr do sol mais deslumbrantes da cidade, visto do mirante natural entre as duas praias. A luz dourada refletindo no mar torna essa experiência simplesmente inesquecível.</p>
+            <a class="button-whatsapp" target="_blank" href="https://wa.me/5521968471111?text=Olá,%20quero%20saber%20mais%20informações%20sobre%20o%20pacote%20Do%20Azul%20ao%20Dourado:%20Camboinhas%20e%20Sossego.">Falar sobre este pacote</a>
         </div>
+
         <div class="pacote">
             <h3>🌞 Nascer, Viver e Pôr-se em Piratininga</h3>
-            <p><strong>Duração:</strong> Dia completo</p>
-            <p><strong>Experiência:</strong> Nascer e pôr do sol + Praias + Mirante</p>
-            <p>Acorde cedo para um espetáculo exclusivo: o nascer do sol na Rua Pedro Tavares Dias Pessoa [...] quadro vivo.</p>
+            <p><strong>Duração:</strong> Dia completo<br><strong>Experiência:</strong> Nascer e pôr do sol + Praias + Mirante</p>
+            <p>Acorde cedo para um espetáculo exclusivo: o nascer do sol na Rua Pedro Tavares Dias Pessoa, em Piratininga — uma vista privilegiada que revela a Lagoa, o mar, o Cristo Redentor ao fundo e uma explosão de cores no céu.</p>
+            <p>Depois, curta um banho na Prainha de Piratininga, ideal para relaxar, e em seguida aproveite o Praião, amplo e perfeito para caminhar ou simplesmente se deitar ao sol. Para encerrar o dia com chave de ouro, subimos ao Mirante de Piratininga para mais um momento mágico: o pôr do sol que transforma todo o horizonte num quadro vivo.</p>
+            <a class="button-whatsapp" target="_blank" href="https://wa.me/5521968471111?text=Olá,%20quero%20saber%20mais%20informações%20sobre%20o%20pacote%20Nascer,%20Viver%20e%20Pôr-se%20em%20Piratininga.">Falar sobre este pacote</a>
         </div>
+
         <div class="pacote">
             <h3>🏝️ História, Arte e Boemia à Beira-Mar</h3>
-            <p><strong>Duração:</strong> Dia completo</p>
-            <p><strong>Experiência:</strong> Patrimônio histórico + Museu + Praia + Vida noturna</p>
-            <p>Nosso roteiro começa na Ilha da Boa Viagem [...] vibe leve e vibrante.</p>
+            <p><strong>Duração:</strong> Dia completo<br><strong>Experiência:</strong> Patrimônio histórico + Museu + Praia + Vida noturna</p>
+            <p>Nosso roteiro começa na Ilha da Boa Viagem, um lugar onde natureza e história se entrelaçam. Tombada pelo IPHAN desde 1938, a ilha já foi ponto estratégico militar, sede de movimentos sociais e abrigo de tradições culturais. Com vista para a Baía de Guanabara, caminhar por ali é como atravessar séculos de histórias e respirar a energia do mar.</p>
+            <p>Em seguida, seguimos para o icônico MAC – Museu de Arte Contemporânea de Niterói, obra-prima de Oscar Niemeyer. Lá dentro, além de exposições modernas, você encontrará uma das vistas mais marcantes da cidade.</p>
+            <p>No fim da tarde, um momento de contemplação na Praia de Icaraí, onde o sol se põe atrás do Rio de Janeiro e do Pão de Açúcar. E para encerrar a noite com alegria e movimento, a pedida é a Rua Nóbrega, reduto boêmio de Niterói, cheia de música ao vivo, bares e aquela vibe leve e vibrante de quem sabe aproveitar a vida.</p>
+            <a class="button-whatsapp" target="_blank" href="https://wa.me/5521968471111?text=Olá,%20quero%20saber%20mais%20informações%20sobre%20o%20pacote%20História,%20Arte%20e%20Boemia%20à%20Beira-Mar.">Falar sobre este pacote</a>
         </div>
     </section>
-
-    <section id="sobre">
-        <h2>Sobre Nós</h2>
-        <p>Era uma vez um bloco de carnaval em Ipanema, onde um brasileiro com sotaque carioca e uma irlandesa de olhos curiosos se esbarraram em meio a confetes e samba. Foi ali, entre risos e marchinhas, que nasceu o que hoje é o Hide in Rio.</p>
-        <p>Decidimos viver o Rio de Janeiro de um jeito diferente: explorando cada canto, cada ladeira, cada nascer e pôr do sol. Agora queremos compartilhar isso com o mundo. Somos um casal que ama contar histórias, mostrar lugares escondidos e transformar passeios em experiências inesquecíveis.</p>
-        <p>Se você quer conhecer o Rio além dos cartões-postais, vem com a gente!</p>
-    </section>
-
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>📱 WhatsApp: +55 21 96847-1111</p>
-        <p>📧 Em breve: contato@hideinrio.com</p>
-        <p>🌐 Site disponível em Português e Inglês (versão em inglês em construção)</p>
-    </section>
-
-    <footer>
-        <p>Hide in Rio &copy; 2025 - Todos os direitos reservados</p>
-    </footer>
 </body>
 </html>
